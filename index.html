@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rachel Ferreira | Neuropsicopedagoga Clínica</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+:root{
+    --primary:#ef8eb0;
+    --primary-light:#f8dce5;
+    --text:#2d3748;
+    --bg:#faf7f8;
+    --whatsapp:#25D366;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.custom-navbar{
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(12px);
+    padding:14px 0;
+    box-shadow:0 5px 25px rgba(0,0,0,0.04);
+}
+
+.logo-header{
+    width:72px;
+    height:72px;
+    object-fit:contain;
+}
+
+.header-title{
+    font-size:1.1rem;
+    color:#1f2937;
+}
+
+.header-subtitle{
+    color:var(--primary);
+    font-size:.85rem;
+    letter-spacing:.4px;
+}
+
+.nav-link{
+    color:#4b5563;
+    margin-left:18px;
+    font-weight:500;
+    position:relative;
+}
+
+.nav-link:hover{
+    color:var(--primary);
+}
+
+.nav-link::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:var(--primary);
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    transition:.3s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.btn-header{
+    background:var(--primary);
+    color:white;
+    padding:12px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:500;
+    box-shadow:0 10px 25px rgba(239,142,176,.35);
+    transition:.3s;
+}
+
+.btn-header:hover{
+    transform:translateY(-2px);
+    color:white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:120px;
+}
+
+.hero-badge{
+    background:var(--primary-light);
+    color:var(--primary);
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:.9rem;
+    font-weight:500;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    line-height:1.1;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#6b7280;
+    line-height:1.8;
+}
+
+.hero img{
+    border-radius:28px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.12);
+}
+
+.btn-hero{
+    background:var(--primary);
+    color:white;
+    padding:18px 38px;
+    border-radius:40px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+    font-weight:600;
+    font-size:1rem;
+    transition:.3s;
+    box-shadow:0 14px 35px rgba(239,142,176,.35);
+}
+
+.btn-hero:hover{
+    transform:translateY(-4px);
+    color:white;
+}
+
+/* =========================
+   BOTÃO CONTATO
+========================= */
+
+.btn-contact{
+    background:var(--whatsapp);
+    color:white;
+    padding:16px 34px;
+    border-radius:40px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    font-weight:600;
+    margin-top:25px;
+    transition:.3s;
+    box-shadow:0 12px 30px rgba(37,211,102,.25);
+}
+
+.btn-contact:hover{
+    transform:translateY(-3px);
+    color:white;
+}
+
+.btn-contact img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section{
+    padding:110px 0;
+}
+
+.section-title{
+    font-size:2.4rem;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.section-subtitle{
+    color:#6b7280;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-box{
+    background:white;
+    padding:12px;
+    border-radius:40px 40px 12px 12px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.sobre-box img{
+    width:100%;
+    height:540px;
+    object-fit:cover;
+    border-radius:32px 32px 10px 10px;
+}
+
+.sobre-text p{
+    line-height:1.9;
+    color:#4b5563;
+    margin-bottom:20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.custom-card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.4s;
+    height:100%;
+}
+
+.custom-card:hover{
+    transform:translateY(-10px);
+}
+
+.custom-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.custom-card-content{
+    padding:28px;
+}
+
+.custom-card-content h5{
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+/* =========================
+   PROCESSO
+========================= */
+
+.process-step{
+    text-align:center;
+}
+
+.process-number{
+    width:65px;
+    height:65px;
+    background:var(--primary);
+    color:white;
+    border-radius:50%;
+    margin:auto auto 20px;
+    line-height:65px;
+    font-weight:700;
+    font-size:1.1rem;
+    box-shadow:0 10px 30px rgba(239,142,176,.35);
+}
+
+/* =========================
+   DEPOIMENTOS
+========================= */
+
+.review-card{
+    background:white;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+    height:100%;
+}
+
+.review-user{
+    display:flex;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.review-user img{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.stars{
+    color:#fbbc04;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+
+.final-cta{
+    background:linear-gradient(135deg,#fff,#fdebf1);
+    border-radius:40px;
+    padding:80px;
+    text-align:center;
+}
+
+/* =========================
+   WHATS FLUTUANTE
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    background:var(--whatsapp);
+    color:white;
+    padding:14px 22px;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    font-weight:600;
+    z-index:999;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:translateY(-3px);
+    color:white;
+}
+
+.whatsapp img{
+    width:26px;
+    height:26px;
+    object-fit:contain;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+.fade-section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .9s ease;
+}
+
+.fade-section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:991px){
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:2.3rem;
+}
+
+.sobre-box{
+    margin-bottom:40px;
+}
+
+.navbar-collapse{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.nav-link{
+    margin:10px 0;
+}
+
+.final-cta{
+    padding:50px 25px;
+}
+
+}
+
+@media(max-width:768px){
+
+.whatsapp span{
+    display:none;
+}
+
+.whatsapp{
+    padding:16px;
+    border-radius:50%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar navbar-expand-lg fixed-top custom-navbar">
+
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="#">
+
+<img src="2.png" class="logo-header">
+
+<div class="ms-3">
+<h5 class="mb-0 fw-semibold header-title">
+Rachel Ferreira
+</h5>
+
+<small class="header-subtitle">
+Neuropsicopedagoga Clínica
+</small>
+</div>
+
+</a>
+
+<button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
+☰
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="#sobre">Sobre</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#processo">Processo</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#abordagem">Abordagem</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#conteudos">Conteúdos</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#relatos">Relatos</a>
+</li>
+
+<li class="nav-item ms-lg-3">
+<a href="#" class="btn-header">
+Ebook Gratuito
+</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero fade-section">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<div class="hero-badge">
+Diagnóstico tardio • Neurodivergência • Avaliação clínica
+</div>
+
+<h1>
+Se entender é um processo
+</h1>
+
+<p>
+Um olhar clínico e acolhedor sobre o diagnóstico tardio e a construção de sentido na vida adulta.
+</p>
+
+<a href="#" class="btn-hero">
+Receber meu ebook gratuito
+</a>
+
+</div>
+
+<div class="col-lg-6">
+<img src="ebook.png" class="img-fluid">
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section fade-section">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-5">
+<div class="sobre-box">
+<img src="rachel.png">
+</div>
+</div>
+
+<div class="col-lg-7 sobre-text">
+
+<h2 class="section-title">
+Sobre a profissional
+</h2>
+
+<p>
+Eu sou Rachel Ferreira, Psicanalista e Neuropsicopedagoga Clínica, especializada em Neuropsicologia Clínica (SBNp 2264664) e pós-graduada em Transtorno do Espectro do Autismo.
+</p>
+
+<p>
+Minha atuação é focada em Avaliação Neuropsicológica, dedicando grande parte dos meus estudos e da minha prática à avaliação de jovens e adultos neurodivergentes.
+</p>
+
+<p>
+Busco construir um espaço seguro de compreensão, organização emocional e autoconhecimento, principalmente para pessoas que viveram anos sem entender seus próprios padrões.
+</p>
+
+<!-- BOTÃO CONTATO -->
+
+<a href="https://wa.me/5521999999999" class="btn-contact">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+<span>Entrar em contato</span>
+
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" class="section bg-light fade-section">
+
+<div class="container text-center">
+
+<h2 class="section-title">
+Como funciona o processo
+</h2>
+
+<p class="section-subtitle mb-4">
+Um acompanhamento estruturado para gerar compreensão, clareza e direcionamento.
+</p>
+
+<div style="
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:14px 26px;
+border:1px solid rgba(239,142,176,.25);
+border-radius:50px;
+background:white;
+margin-bottom:55px;
+box-shadow:0 8px 25px rgba(0,0,0,.04);
+">
+
+<div style="
+width:12px;
+height:12px;
+border-radius:50%;
+background:#ef8eb0;
+flex-shrink:0;
+">
+</div>
+
+<span style="
+font-size:1.08rem;
+font-weight:600;
+color:#4b5563;
+letter-spacing:.2px;
+">
+Atendimento 100% online
+</span>
+
+</div>
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="process-step">
+<div class="process-number">1</div>
+<h5>Entrevista inicial</h5>
+<p>Compreensão da sua trajetória e demandas.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="process-step">
+<div class="process-number">2</div>
+<h5>Avaliação clínica</h5>
+<p>Aplicação de instrumentos específicos.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="process-step">
+<div class="process-number">3</div>
+<h5>Análise técnica</h5>
+<p>Leitura integrada dos resultados.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="process-step">
+<div class="process-number">4</div>
+<h5>Devolutiva</h5>
+<p>Orientações práticas e compreensão do processo.</p>
+</div>
+</div>
+
+</div>
+
+<!-- BOTÃO CONTATO -->
+
+<div class="mt-5">
+
+<a href="https://wa.me/5521999999999" class="btn-contact">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+<span>Entrar em contato</span>
+
+</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- ABORDAGEM -->
+<section id="abordagem" class="section fade-section">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="section-title">
+Abordagem Clínica
+</h2>
+
+<p class="section-subtitle">
+Um trabalho focado em acolhimento, compreensão e leitura clínica individualizada.
+</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="custom-card">
+
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2">
+
+<div class="custom-card-content">
+<h5>Avaliação estruturada</h5>
+<p>
+Investigação aprofundada do funcionamento cognitivo e emocional.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="custom-card">
+
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+
+<div class="custom-card-content">
+<h5>Diagnóstico tardio</h5>
+<p>
+Compreensão da trajetória de vida e dos padrões neurodivergentes.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="custom-card">
+
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+
+<div class="custom-card-content">
+<h5>Aplicação prática</h5>
+<p>
+Orientações reais para o cotidiano e organização emocional.
+</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- FACILIDADES -->
+<section id="facilidades" class="section fade-section">
+
+<div class="container">
+
+<div style="
+background:white;
+border-radius:36px;
+padding:22px;
+box-shadow:0 20px 60px rgba(0,0,0,.06);
+overflow:hidden;
+">
+
+<div class="row align-items-center g-0">
+
+<!-- IMAGEM -->
+<div class="col-lg-5">
+
+<img 
+src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop"
+class="img-fluid"
+style="
+width:100%;
+height:100%;
+min-height:420px;
+object-fit:cover;
+border-radius:28px;
+">
+
+</div>
+
+<!-- TEXTO -->
+<div class="col-lg-7">
+
+<div style="
+padding:50px;
+">
+
+<h2 style="
+font-size:2.2rem;
+font-weight:700;
+line-height:1.3;
+margin-bottom:22px;
+color:#2d3748;
+">
+Um cuidado que também respeita o seu momento
+</h2>
+
+<p style="
+font-size:1.06rem;
+line-height:1.9;
+color:#6b7280;
+margin-bottom:0;
+max-width:560px;
+">
+O processo pode ser parcelado em até 12x no cartão de crédito, permitindo mais tranquilidade e organização durante o acompanhamento.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTEÚDOS -->
+<section id="conteudos" class="section fade-section">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+Conteúdos
+</h2>
+
+<p class="section-subtitle">
+Reflexões, informações e textos sobre neurodivergência, diagnóstico tardio e saúde emocional.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- POST 1 -->
+<div class="col-lg-4">
+
+<div class="custom-card">
+
+<img 
+src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop"
+>
+
+<div class="custom-card-content">
+
+<small style="
+color:#ef8eb0;
+font-weight:600;
+letter-spacing:.3px;
+">
+Diagnóstico tardio
+</small>
+
+<h5 style="margin-top:12px;">
+Por que tantas mulheres descobrem o TEA apenas na vida adulta?
+</h5>
+
+<p>
+Uma reflexão sobre mascaramento social, exaustão emocional e autopercepção tardia.
+</p>
+
+<a href="#" style="
+text-decoration:none;
+color:#2d3748;
+font-weight:600;
+">
+Ler conteúdo →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POST 2 -->
+<div class="col-lg-4">
+
+<div class="custom-card">
+
+<img 
+src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+>
+
+<div class="custom-card-content">
+
+<small style="
+color:#ef8eb0;
+font-weight:600;
+letter-spacing:.3px;
+">
+Neurodivergência
+</small>
+
+<h5 style="margin-top:12px;">
+O sentimento de “não se encaixar” pode ter uma explicação
+</h5>
+
+<p>
+Entenda como padrões vividos desde a infância podem estar ligados à neurodivergência.
+</p>
+
+<a href="#" style="
+text-decoration:none;
+color:#2d3748;
+font-weight:600;
+">
+Ler conteúdo →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- POST 3 -->
+<div class="col-lg-4">
+
+<div class="custom-card">
+
+<img 
+src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop"
+>
+
+<div class="custom-card-content">
+
+<small style="
+color:#ef8eb0;
+font-weight:600;
+letter-spacing:.3px;
+">
+Saúde emocional
+</small>
+
+<h5 style="margin-top:12px;">
+Autoconhecimento também é uma forma de cuidado
+</h5>
+
+<p>
+Como compreender sua própria trajetória pode trazer mais clareza emocional e acolhimento.
+</p>
+
+<a href="#" style="
+text-decoration:none;
+color:#2d3748;
+font-weight:600;
+">
+Ler conteúdo →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- RELATOS -->
+<section id="relatos" class="section bg-light fade-section">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+Relatos
+</h2>
+
+<p class="section-subtitle">
+Experiências de pessoas que passaram pelo processo clínico.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-4">
+<div class="review-card">
+
+<div class="review-user">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+<div class="ms-3">
+<strong>Ana</strong>
+<div class="stars">★★★★★</div>
+</div>
+
+</div>
+
+<p>
+“O processo me ajudou a compreender minha história de uma forma muito mais clara.”
+</p>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="review-card">
+
+<div class="review-user">
+
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+<div class="ms-3">
+<strong>Marina</strong>
+<div class="stars">★★★★★</div>
+</div>
+
+</div>
+
+<p>
+“Finalmente consegui entender padrões que me acompanhavam há anos.”
+</p>
+
+</div>
+</div>
+
+<div class="col-lg-4">
+<div class="review-card">
+
+<div class="review-user">
+
+<img src="https://randomuser.me/api/portraits/women/12.jpg">
+
+<div class="ms-3">
+<strong>Juliana</strong>
+<div class="stars">★★★★★</div>
+</div>
+
+</div>
+
+<p>
+“Me senti acolhida e compreendida durante todo o processo.”
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section fade-section">
+
+<div class="container">
+
+<div class="final-cta">
+
+<h2 class="section-title">
+Você não precisa passar por isso sozinha
+</h2>
+
+<p class="section-subtitle mb-4">
+Receba gratuitamente o ebook e comece sua jornada de compreensão.
+</p>
+
+<a href="#" class="btn-hero">
+Receber meu ebook gratuito
+</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER SLIM -->
+<footer style="
+background:white;
+padding:28px 0;
+border-top:1px solid rgba(0,0,0,.06);
+">
+
+<div class="container text-center">
+
+<!-- LINKS -->
+<div style="
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+margin-bottom:18px;
+">
+
+<a 
+href="https://www.sbnpbrasil.com.br/" 
+target="_blank"
+style="
+color:#6b7280;
+text-decoration:none;
+font-size:.95rem;
+font-weight:500;
+transition:.3s;
+"
+>
+Sociedade Brasileira de Neuropsicologia
+</a>
+
+<a 
+href="http://lattes.cnpq.br/9862413792135648" 
+target="_blank"
+style="
+color:#6b7280;
+text-decoration:none;
+font-size:.95rem;
+font-weight:500;
+transition:.3s;
+"
+>
+Currículo Lattes — Plataforma CNPq
+</a>
+
+</div>
+
+<!-- COPYRIGHT -->
+<p style="
+margin:0;
+color:#9ca3af;
+font-size:.92rem;
+">
+© 2026 Rachel Ferreira • Todos os direitos reservados
+</p>
+
+</div>
+</footer>
+
+<!-- WHATS -->
+<a href="https://wa.me/5521999999999" class="whatsapp">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+<span>Falar no WhatsApp</span>
+
+</a>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.fade-section').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
